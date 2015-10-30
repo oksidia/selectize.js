@@ -713,6 +713,7 @@
 	var KEY_A         = 65;
 	var KEY_COMMA     = 188;
 	var KEY_RETURN    = 13;
+	var KEY_SPACE     = 32;
 	var KEY_ESC       = 27;
 	var KEY_LEFT      = 37;
 	var KEY_UP        = 38;
@@ -732,6 +733,7 @@
 	
 	// for now, android support in general is too spotty to support validity
 	var SUPPORTS_VALIDITY_API = !/android/i.test(window.navigator.userAgent) && !!document.createElement('form').validity;
+	
 	
 	var isset = function(object) {
 		return typeof object !== 'undefined';
