@@ -492,6 +492,12 @@ $.extend(Selectize.prototype, {
 					e.preventDefault();
 				}
 				return;
+			case KEY_SPACE:
+				if (self.settings.selectOnSpace && self.isOpen && self.$activeOption) {
+					self.onOptionSelect({currentTarget: self.$activeOption});
+					e.preventDefault();
+				}
+				return;
 			case KEY_LEFT:
 				self.advanceSelection(-1, e);
 				return;
