@@ -898,13 +898,12 @@
 				return;
 			}
 	
+			if (e.keyCode === KEY_A && self.isCmdDown) {
+				self.selectAll();
+				return;
+			}
+	
 			switch (e.keyCode) {
-				case KEY_A:
-					if (self.isCmdDown) {
-						self.selectAll();
-						return;
-					}
-					break;
 				case KEY_ESC:
 					if (self.isOpen) {
 						e.preventDefault();
@@ -912,8 +911,6 @@
 						self.close();
 					}
 					return;
-				case KEY_N:
-					if (!e.ctrlKey || e.altKey) break;
 				case KEY_DOWN:
 					if (!self.isOpen && self.hasOptions) {
 						self.open();
@@ -924,8 +921,6 @@
 					}
 					e.preventDefault();
 					return;
-				case KEY_P:
-					if (!e.ctrlKey || e.altKey) break;
 				case KEY_UP:
 					if (self.$activeOption) {
 						self.ignoreHover = true;
@@ -970,6 +965,10 @@
 				case KEY_DELETE:
 					self.deleteSelection(e);
 					return;
+				default:
+					if (self.settings.mode === 'single' && self.isOpen && self.isFull()) {
+						self.clear('silent');
+					}
 			}
 	
 			if ((self.isFull() || self.isInputHidden) && !(IS_MAC ? e.metaKey : e.ctrlKey)) {
