@@ -18,10 +18,7 @@
     "type": "git",
     "url": "git://github.com/brianreavis/selectize.js.git"
   },
-  "dependencies": {
-    "microplugin": "0.0.3",
-    "sifter": "^0.4.0"
-  },
+  "dependencies": {},
   "devDependencies": {
     "grunt": "0.4.x",
     "grunt-bower-task": "^0.4.0",
@@ -43,7 +40,9 @@
     "karma-mocha-reporter": "^0.3.1",
     "karma-phantomjs-launcher": "^0.1.4",
     "karma-safari-launcher": "^0.1.1",
-    "karma-sauce-launcher": "^0.2.10"
+    "karma-sauce-launcher": "^0.2.10",
+    "microplugin": "0.0.3",
+    "sifter": "^0.4.0"
   },
   "scripts": {
     "test": "./node_modules/karma/bin/karma start"
