@@ -19,7 +19,7 @@
     "url": "git://github.com/brianreavis/selectize.js.git"
   },
   "dependencies": {
-    "sifter": "^0.4.0",
+    "sifter": "^0.5.3",
     "microplugin": "0.0.3"
   },
   "devDependencies": {
